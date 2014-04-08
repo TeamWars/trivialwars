@@ -14,39 +14,28 @@
             body{
                 background-image: url("<?php echo $view['assets']->getUrl('bundles/trivial/images/fondo.jpg'); ?>");
             }
+            #registroUsuarios{
+                background-image: url("<?php echo $view['assets']->getUrl('bundles/trivial/images/backgroundFormIndex.png'); ?>");
+                background-repeat: no-repeat;
+                background-size: 100%;
+            }
         </style>
     </head>
     <body>
         <div id="cabecera">
             <div id="logo">
-                <p id="titulo">trivial wars</p>
-            </div>
-            <div id="registroUsuarios" align="right">
-                <form>
-                    <p class="textoUsuario">Usuario:         .  <input type = 'text' name = 'usuario' width="10%" /></p><br />
-                    <p class="textoUsuario">Password:           . <input type = 'text' name = 'usuario' width="10%" /></p>
-                    <button class="botonUsuarios">Login</button><button class="botonUsuarios">Regístrate</button>
-                </form>
-
+                <h1 id="titulo">trivial wars</h1>
             </div>
         </div>
-        <hr width="100%">
-        <div id="cuerpo" align="center">
-            <div id="trailer" align="center">
-                <img src="<?php echo $view['assets']->getUrl('bundles/trivial/images/intro.gif'); ?>"/>
-            </div>
-
-            <div id="menu" aling="center">
-                <a href="<?php echo $view["router"]->generate("board") ?>"><button class="botonMenu" onmouseover="document.getElementById('sablelaser').play()">inicio</button></a>
-                <button class="botonMenu" onmouseover="document.getElementById('sablelaser').play()">configuracion del juego</button>
-                <button class="botonMenu" onmouseover="document.getElementById('sablelaser').play()">sobre nosotros</button>
-            </div>
-        </div>
-        <hr width="100%">
-
-        <div id="pie"> 
-            <audio id="sablelaser" src="<?php echo $view['assets']->getUrl('bundles/trivial/audio/saber1.wav'); ?>"></audio>
-            <audio src="<?php echo $view['assets']->getUrl('bundles/trivial/audio/mainTheme.wav'); ?>" controls="controls"></audio>
+        <div id="registroUsuarios" align="center">
+            <form method="get" action="<?php echo $view["router"]->generate("player") ?>">
+                Usuario:           <input type = 'text' id="user" name = 'user' width="10%" /><br>
+                Password:            <input type = 'text' id="password" name = 'password' width="10%" /><br>
+                <p id="textRemember"><input id="remember" name="remember" type="checkbox" style="text-align: left;"/>Recordarme</p>
+                <input id="loginButton" type="submit" class="botonUsuarios" value="login" /><br>
+                <a href=""><p id="register">¿Aún no tienes cuenta? Regístrate</p></a>
+<!--                <input id="registerButton" type="button" class="botonUsuarios" value="registrate"/>-->
+            </form>
         </div>
     </body>
 </html>

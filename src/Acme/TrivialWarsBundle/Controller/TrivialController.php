@@ -6,10 +6,12 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class TrivialController extends Controller
 {
-    public function indexAction()
-    {
-        return $this->render('AcmeTrivialWarsBundle:Trivial/pruebas:index.html.php');
-//        return $this->render('AcmeTrivialWarsBundle:Trivial:index.html.php');
+    public function indexAction(){
+        return $this->render('AcmeTrivialWarsBundle:Trivial:index.html.php');
+    }
+    
+    public function playerAction(){
+        return $this->render('AcmeTrivialWarsBundle:Trivial:player.html.php');
     }
     
     public function tableroAction(){

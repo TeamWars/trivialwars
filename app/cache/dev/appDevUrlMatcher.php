@@ -218,6 +218,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'Acme\\TrivialWarsBundle\\Controller\\TrivialController::indexAction',  '_route' => 'homepage',);
             }
 
+            // player
+            if ($pathinfo === '/trivial/player') {
+                return array (  '_controller' => 'Acme\\TrivialWarsBundle\\Controller\\TrivialController::playerAction',  '_route' => 'player',);
+            }
+
             // board
             if ($pathinfo === '/trivial/game') {
                 return array (  '_controller' => 'Acme\\TrivialWarsBundle\\Controller\\TrivialController::tableroAction',  '_route' => 'board',);
