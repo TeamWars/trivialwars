@@ -3,7 +3,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <!--<link rel="icon" sizes="16x16" href="{{ asset('favicon.ico') }}" />-->
-        <link rel="stylesheet" href="<?php echo $view['assets']->getUrl('bundles/trivial/css/index/principal.css'); ?>" />
+        <link rel="stylesheet" href="<?php echo $view['assets']->getUrl('bundles/trivial/css/player/player.css'); ?>" />
+        <script src="<?php echo $view['assets']->getUrl('bundles/trivial/js/libs/jquery-1.9.0/jquery.min.js'); ?>"></script>
         <title>Trivial Wars</title>
         <style type="text/css">
             @font-face
@@ -21,24 +22,29 @@
             <div id="logo">
                 <p id="titulo">trivial wars</p>
             </div>
-            <div id="registroUsuarios" align="right">
-                <form>
-                    <p class="textoUsuario">¡¡Bienvenido Usuario!!</p><br />
-                    <input id="closeSessionButton" class="botonUsuarios" value="cerrar sesion"/>
-                </form>
-
+            <div id="userSession" align="right">
+                <p class="textoUsuario">¡¡Bienvenido Usuario!!
+                    <input id="closeSessionButton" value="cerrar sesion" onmouseover="document.getElementById('sablelaser').play()"/></p>
             </div>
         </div>
         <div id="cuerpo" align="center">
             <div id="trailer" align="center">
-                <img src="<?php echo $view['assets']->getUrl('bundles/trivial/images/intro.gif'); ?>"/>
+                <!--<img src="<?php // echo $view['assets']->getUrl('bundles/trivial/images/intro.gif'); ?>"/>-->
+                <video width="720" height="440" autoplay loop>
+                    <source src="<?php echo $view['assets']->getUrl('bundles/trivial/video/Recorte4-StarWarsVI.mp4'); ?>" type="video/mp4">
+                    </object>
+                </video>
             </div>
 
             <div id="menu" aling="center">
-                <a href="<?php echo $view["router"]->generate("board") ?>"><button class="botonMenu" onmouseover="document.getElementById('sablelaser').play()">crear partida</button></a>
-                <button class="botonMenu" onmouseover="document.getElementById('sablelaser').play()">unirse a partida</button>
-                <button class="botonMenu" onmouseover="document.getElementById('sablelaser').play()">configuracion del juego</button>
-                <button class="botonMenu" onmouseover="document.getElementById('sablelaser').play()">sobre nosotros</button>
+                <div>
+                    <a href="<?php echo $view["router"]->generate("board") ?>"><button class="botonMenu" onmouseover="document.getElementById('sablelaser').play()">crear partida</button></a>
+                    <button class="botonMenu" onmouseover="document.getElementById('sablelaser').play()">unirse a partida</button>
+                </div><br>
+                <div>
+                    <button class="botonMenu" onmouseover="document.getElementById('sablelaser').play()">configuracion del juego</button>
+                    <button class="botonMenu" onmouseover="document.getElementById('sablelaser').play()">sobre nosotros</button>
+                </div>
             </div>
         </div>
         <hr width="100%">

@@ -6,37 +6,39 @@
         <title>Trivial Wars</title>
         <script src="<?php echo $view['assets']->getUrl('bundles/trivial/js/libs/jquery-1.9.0/jquery.min.js'); ?>"></script>
         <script type="text/javascript">
-$(document).ready(function() {
-    var casillaActual = 0;
-    posicionInicial = $("#" + casillaActual).position();
-//    $("ficha1").position({right: posicionInicial.right, bottom: posicionInicial.bottom});
-    
-    for (i = 0; i < 64; i++) {
-        $("#" + i).css({backgroundImage: "url('<?php echo $view['assets']->getUrl('bundles/trivial/images'); ?>/casilla" + i + ".png')"});
-    }
-    $("#ficha1").click(function() {
-        var posicion = $("#" + casillaActual+4).position();
-        $(this).animate({left: posicion.left, top: posicion.top});
-    });
-    $("#dado").click(function() {
-        var delay = 2000;
-        while (delay > 0) {
-            setTimeout(function() {
-                var random = Math.floor((Math.random() * 10) + 1);
-                $("#imagenDado").attr("src", "<?php echo $view['assets']->getUrl('bundles/trivial/images/'); ?>" + random + ".png");
-            }, delay);
-            delay -= 50;
-        }
-        if (delay <= 0) {
-            var random = Math.floor((Math.random() * 6) + 1);
-            $("#imagenDado").attr("src", "<?php echo $view['assets']->getUrl('bundles/trivial/images/'); ?>" + random + ".png");
-            next = casillaActual + random;
-            var posicion = $("#" + next).position();
-            $("#ficha1").animate({left: posicion.left, top: posicion.top});
-        }
+            var casillaActual = 0;
+            var contador = 0;
 
-    });
-});
+            function moverFicha(next) {
+                    casillaActual = next;
+                    var position = $("#" + next).position();
+                    $("#ficha1").animate({top: position.top, left: position.left});
+            }
+
+            $(document).ready(function() {
+
+                posicionInicial = $("#" + casillaActual).position();
+                $("ficha1").position({top: posicionInicial.top, left: posicionInicial.left});
+
+                for (i = 0; i < 64; i++) {
+                    $("#" + i).css({backgroundImage: "url('<?php echo $view['assets']->getUrl('bundles/trivial/images'); ?>/casilla" + i + ".png')"});
+                }
+
+                $("#dado").click(function() {
+                    var id = setInterval(function() {
+                        var random = Math.floor((Math.random() * 10) + 1);
+                        $("#imagenDado").attr("src", "<?php echo $view['assets']->getUrl('bundles/trivial/images/'); ?>" + random + ".png");
+                    }, 50);
+                    setTimeout(function() {
+                        clearInterval(id);
+                        var random = Math.floor((Math.random() * 6) + 1);
+                        $("#imagenDado").attr("src", "<?php echo $view['assets']->getUrl('bundles/trivial/images/'); ?>" + random + ".png");
+                        next = casillaActual + random;
+                        moverFicha(next);
+                    }, 1500);
+                    
+                });
+            });
 
         </script>
         <style type="text/css">

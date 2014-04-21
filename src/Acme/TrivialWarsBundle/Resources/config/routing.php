@@ -17,4 +17,9 @@ $collection->add('board', new Route('/trivial/game', array(
     '_controller' => 'AcmeTrivialWarsBundle:Trivial:tablero',
 )));
 
+$collection->add('register', new Route('/trivial/register', array(
+    '_controller' => 'AcmeTrivialWarsBundle:Trivial:register',
+)));
+
+
 return $collection;

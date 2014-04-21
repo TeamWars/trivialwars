@@ -43,6 +43,7 @@ class appDevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
         'homepage' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'Acme\\TrivialWarsBundle\\Controller\\TrivialController::indexAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/trivial/',    ),  ),  4 =>   array (  ),),
         'player' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'Acme\\TrivialWarsBundle\\Controller\\TrivialController::playerAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/trivial/player',    ),  ),  4 =>   array (  ),),
         'board' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'Acme\\TrivialWarsBundle\\Controller\\TrivialController::tableroAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/trivial/game',    ),  ),  4 =>   array (  ),),
+        'register' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'Acme\\TrivialWarsBundle\\Controller\\TrivialController::registerAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/trivial/register',    ),  ),  4 =>   array (  ),),
     );
 
     /**
