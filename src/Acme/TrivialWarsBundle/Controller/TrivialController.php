@@ -10,8 +10,8 @@ class TrivialController extends Controller {
         return $this->render('AcmeTrivialWarsBundle:Trivial:index.html.php');
     }
 
-    public function playerAction() {
-        return $this->render('AcmeTrivialWarsBundle:Trivial:player.html.php');
+    public function userAction() {
+        return $this->render('AcmeTrivialWarsBundle:Trivial/User:user.html.php');
     }
 
     public function tableroAction() {
