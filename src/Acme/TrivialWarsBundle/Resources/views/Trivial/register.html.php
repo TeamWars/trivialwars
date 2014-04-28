@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="icon" type="image/png" href="<?php echo $view['assets']->getUrl('bundles/trivial/images/favicon.ico'); ?>" />
         <link rel="stylesheet" href="<?php echo $view['assets']->getUrl('bundles/trivial/css/player/register.css'); ?>" />
         <title>Trivial Wars - Register</title>
         <style type="text/css">

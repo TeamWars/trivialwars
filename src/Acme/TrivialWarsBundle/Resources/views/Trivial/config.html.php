@@ -2,8 +2,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <!--<link rel="icon" sizes="16x16" href="{{ asset('favicon.ico') }}" />-->
-        <link rel="stylesheet" href="<?php echo $view['assets']->getUrl('bundles/trivial/css/player/player.css'); ?>" />
+        <link rel="icon" type="image/png" href="<?php echo $view['assets']->getUrl('bundles/trivial/images/favicon.ico'); ?>" />
+        <link rel="stylesheet" href="<?php echo $view['assets']->getUrl('bundles/trivial/css/player/config.css'); ?>" />
         <script src="<?php echo $view['assets']->getUrl('bundles/trivial/js/libs/jquery-1.9.0/jquery.min.js'); ?>"></script>
         <title>Trivial Wars</title>
         <style type="text/css">
@@ -29,8 +29,7 @@
         </div>
         <div id="cuerpo" align="center">
             <div id="trailer" align="center">
-                <!--<img src="<?php // echo $view['assets']->getUrl('bundles/trivial/images/intro.gif'); ?>"/>-->
-                <video width="720" height="440" autoplay loop>
+                <video width="720" height="440" autoplay muted loop>
                     <source src="<?php echo $view['assets']->getUrl('bundles/trivial/video/Recorte4-StarWarsVI.mp4'); ?>" type="video/mp4">
                     </object>
                 </video>
@@ -51,7 +50,7 @@
 
         <div id="pie"> 
             <audio id="sablelaser" src="<?php echo $view['assets']->getUrl('bundles/trivial/audio/saber1.wav'); ?>"></audio>
-            <audio src="<?php echo $view['assets']->getUrl('bundles/trivial/audio/mainTheme.wav'); ?>" controls="controls"></audio>
+            <audio src="<?php echo $view['assets']->getUrl('bundles/trivial/audio/mainTheme.wav'); ?>" controls="controls" autoplay></audio>
         </div>
     </body>
 </html>

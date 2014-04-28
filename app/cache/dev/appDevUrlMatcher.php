@@ -220,7 +220,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
             // player
             if ($pathinfo === '/trivial/player') {
-                return array (  '_controller' => 'Acme\\TrivialWarsBundle\\Controller\\TrivialController::playerAction',  '_route' => 'player',);
+                return array (  '_controller' => 'Acme\\TrivialWarsBundle\\Controller\\UserController::playerAction',  '_route' => 'player',);
             }
 
             // board

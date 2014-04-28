@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <!--<link rel="icon" sizes="16x16" href="{{ asset('favicon.ico') }}" />-->
+        <link rel="icon" type="image/png" href="<?php echo $view['assets']->getUrl('bundles/trivial/images/favicon.ico'); ?>" />
         <link rel="stylesheet" href="<?php echo $view['assets']->getUrl('bundles/trivial/css/index/principal.css'); ?>" />
         <title>Trivial Wars</title>
         <style type="text/css">

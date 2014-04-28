@@ -10,7 +10,7 @@ $collection->add('homepage', new Route('/trivial/', array(
 )));
 
 $collection->add('player', new Route('/trivial/player', array(
-    '_controller' => 'AcmeTrivialWarsBundle:Trivial:player',
+    '_controller' => 'AcmeTrivialWarsBundle:User:player',
 )));
 
 $collection->add('board', new Route('/trivial/game', array(
@@ -20,6 +20,5 @@ $collection->add('board', new Route('/trivial/game', array(
 $collection->add('register', new Route('/trivial/register', array(
     '_controller' => 'AcmeTrivialWarsBundle:Trivial:register',
 )));
-
 
 return $collection;
