@@ -106,3 +106,8 @@ form a:hover{
     border-top-color: #e3e6e8;
     background: #e3e6e8;
 }
+
+td{
+    font-size: 15px;
+    font-family: monospace;
+}
